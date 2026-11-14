@@ -167,7 +167,7 @@ export default function MentorshipPage() {
   const active = plan?.status === "active";
   const lead = mentors.find((m) => m.is_lead) ?? mentors[0];
   const guests = mentors.filter((m) => m !== lead);
-  const heroPhoto = lead?.photo_url || "/img/04_retrato_mentoria_ilustrativo.jpg";
+  const heroPhoto = lead?.photo_url || "/img/carol.jpeg";
   const left = plan ? Math.max(0, plan.sessions_total - plan.sessions_used) : 0;
 
   return (
@@ -207,7 +207,7 @@ export default function MentorshipPage() {
             </div>
           ) : null}
         </div>
-        <div className="order-first min-h-[240px] bg-cover bg-top md:order-none md:min-h-[280px]" style={{ backgroundImage: `url(${heroPhoto})` }} role="img" aria-label={lead ? `Retrato ilustrativo de ${lead.name}` : "Mentoria"} />
+        <div className="order-first min-h-[240px] bg-cover md:order-none md:min-h-[280px]" style={{ backgroundImage: `url(${heroPhoto})`, backgroundPosition: "50% 22%" }} role="img" aria-label={lead ? lead.name : "Mentoria"} />
       </div>
 
       {plan && plan.status !== "active" ? (

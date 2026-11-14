@@ -14,7 +14,7 @@ from app.modules.mail import service as mail
 from app.modules.mentorship.models import Mentor
 
 MENTOR_PHOTO = (
-    Path(__file__).resolve().parents[4] / "imagens" / "home" / "04_retrato_mentoria_ilustrativo.jpg"
+    Path(__file__).resolve().parents[4] / "frontend" / "public" / "img" / "carol.jpeg"
 )
 
 

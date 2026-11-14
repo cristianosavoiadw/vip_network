@@ -284,7 +284,7 @@ function EventsMentor() {
             <p>Com <b>Caroline Gonçalves</b><br /><span className="text-ink-muted">Mentora de negócios e estratégia B2B</span></p>
             <Link to="/app/mentoria" className="btn btn-outline btn-sm self-start">Conhecer o programa</Link>
           </div>
-          <div className="w-[42%] bg-cover bg-top max-[480px]:h-[180px] max-[480px]:w-full" role="img" aria-label="Retrato ilustrativo da mentora" style={{ backgroundImage: "url(/img/04_retrato_mentoria_ilustrativo.jpg)" }} />
+          <div className="w-[42%] bg-cover max-[480px]:h-[220px] max-[480px]:w-full" role="img" aria-label="Caroline Gonçalves, mentora da VIP Network" style={{ backgroundImage: "url(/img/carol.jpeg)", backgroundPosition: "50% 22%" }} />
         </div>
       </div>
     </section>
