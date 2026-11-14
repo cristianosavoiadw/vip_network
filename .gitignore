@@ -1,0 +1,13 @@
+backend/.env_dev
+backend/.env_prod
+backend/.venv/
+**/__pycache__/
+*.pyc
+.pytest_cache/
+.ruff_cache/
+frontend/node_modules/
+frontend/dist/
+*.local
+backend/data/
+*.tsbuildinfo
+.claude/settings.local.json

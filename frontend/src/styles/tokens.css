@@ -1,0 +1,38 @@
+/* VIP Network design tokens (from the approved mock). Light on :root, dark on [data-theme="dark"]
+   and on prefers-color-scheme when the user has not chosen. */
+:root {
+  --bg: #F3F4F8;
+  --surface: #FFFFFF;
+  --surface-2: #F7F8FB;
+  --line: #E2E5EE;
+  --line-2: #D3D8E4;
+  --fg: #0E1930;
+  --fg-2: #2D3954;
+  --muted: #5D6780;
+  --gold-ink: #86621C;
+  --buy: #1E7B53; --buy-bg: #E3F4EB;
+  --sell: #2457B8; --sell-bg: #E5EDFB;
+  --part: #7340B8; --part-bg: #EFE7FA;
+  --net: #5D6780; --net-bg: #ECEEF3;
+  --ok: #1E7B53;
+  --warn: #A6660F; --warn-bg: #FBF0DC;
+  --bad: #B7372F; --bad-bg: #FBE6E4;
+  color-scheme: light;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #070E1C; --surface: #0E1932; --surface-2: #12203D; --line: #1D2B4A; --line-2: #2A3A5E;
+    --fg: #EDF0F6; --fg-2: #C9D0DF; --muted: #94A0B9; --gold-ink: #E2C27A;
+    --buy: #5CC994; --buy-bg: #123227; --sell: #7FA7F2; --sell-bg: #152647; --part: #B693EC; --part-bg: #271B42;
+    --net: #A3ADC4; --net-bg: #1B2742; --ok: #5CC994; --warn: #E5AE55; --warn-bg: #33260F; --bad: #F08A80; --bad-bg: #3A1A18;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #070E1C; --surface: #0E1932; --surface-2: #12203D; --line: #1D2B4A; --line-2: #2A3A5E;
+  --fg: #EDF0F6; --fg-2: #C9D0DF; --muted: #94A0B9; --gold-ink: #E2C27A;
+  --buy: #5CC994; --buy-bg: #123227; --sell: #7FA7F2; --sell-bg: #152647; --part: #B693EC; --part-bg: #271B42;
+  --net: #A3ADC4; --net-bg: #1B2742; --ok: #5CC994; --warn: #E5AE55; --warn-bg: #33260F; --bad: #F08A80; --bad-bg: #3A1A18;
+  color-scheme: dark;
+}

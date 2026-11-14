@@ -1,0 +1,51 @@
+@import "./tokens.css";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html, body, #root { min-height: 100%; }
+  body { @apply bg-canvas font-sans text-[15px] leading-relaxed text-ink antialiased; }
+  h1, h2, h3, h4 { @apply font-display tracking-tight; text-wrap: balance; }
+  :focus-visible { outline: 2px solid #C9A14A; outline-offset: 2px; border-radius: 6px; }
+  .num { font-variant-numeric: tabular-nums; }
+}
+
+@layer components {
+  .btn { @apply inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-control border border-transparent px-[18px] py-[10px] text-sm font-semibold no-underline transition active:translate-y-px disabled:cursor-not-allowed disabled:opacity-50; }
+  .btn-gold { @apply bg-gold-grad text-[#1A1306] shadow-gold hover:shadow-[0_6px_20px_rgba(201,161,74,.5)]; }
+  .btn-navy { @apply bg-navy-800 text-white hover:bg-navy-700; }
+  .btn-outline { @apply border-line-2 bg-surface text-ink hover:border-ink-2; }
+  .btn-ghost-light { @apply border-white/70 bg-transparent text-white hover:bg-white/10; }
+  .btn-danger { @apply border-bad bg-transparent text-bad hover:bg-bad-bg; }
+  .btn-sm { @apply rounded-lg px-3 py-1.5 text-[13px]; }
+  .btn-lg { @apply px-6 py-3.5 text-[15px]; }
+
+  .chip { @apply inline-flex items-center gap-1 whitespace-nowrap rounded-full px-2.5 py-0.5 text-xs font-semibold; }
+  .chip-buy { @apply bg-buy-bg text-buy; }
+  .chip-sell { @apply bg-sell-bg text-sell; }
+  .chip-part { @apply bg-part-bg text-part; }
+  .chip-net { @apply bg-net-bg text-net; }
+  .chip-ok { @apply bg-buy-bg text-ok; }
+  .chip-warn { @apply bg-warn-bg text-warn; }
+  .chip-bad { @apply bg-bad-bg text-bad; }
+  .chip-gold { @apply bg-gold/15 text-gold-ink; }
+
+  .panel { @apply min-w-0 rounded-card border border-line bg-surface; }
+  .panel-h { @apply flex flex-wrap items-center gap-2.5 border-b border-line px-[18px] py-4; }
+  .panel-h h2 { @apply mr-auto text-base; }
+  .panel-b { @apply px-[18px] py-4; }
+
+  .field { @apply flex min-w-0 flex-col gap-1.5; }
+  .field label, .field .label { @apply text-[13px] font-semibold text-ink-2; }
+  .input { @apply w-full rounded-control border border-line-2 bg-surface px-3 py-[11px] text-ink placeholder:text-ink-muted; }
+  .hint { @apply text-xs text-ink-muted; }
+
+  .eyebrow { @apply text-xs font-bold uppercase tracking-[.12em] text-gold-ink; }
+  .wrap { @apply mx-auto max-w-site px-4 sm:px-6; }
+  .kpi { @apply flex flex-col gap-1 rounded-xl border border-line bg-surface px-4 py-3.5 no-underline transition hover:border-gold hover:shadow-sm2; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { transition: none !important; animation: none !important; }
+}
